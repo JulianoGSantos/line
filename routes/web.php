@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\Client;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
+//clientes
+Route::get('/client', [Client::class, 'index'])->name('client.index');
 
 Route::get('/', function () {
     return view('welcome');
