@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/start', [StartController::class, 'index'])->name('start.index');
 
 //clientes
+Route::get('/client/list', [ClientController::class, 'list'])->name('client.list');
 Route::post('/client/register', [ClientController::class, 'store'])->name('client.store');
 Route::get('/client', [ClientController::class, 'index'])->name('client.index');
 

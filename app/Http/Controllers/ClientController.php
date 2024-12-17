@@ -15,4 +15,9 @@ class ClientController extends Controller
         Client::create($request->all());
         return redirect()->route('client.index');
     }
+
+    public function list(Request $request){
+        $client = Client::first();
+        return $client;
+    }
 }
